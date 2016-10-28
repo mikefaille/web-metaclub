@@ -1,1 +1,10 @@
-# web-metaclub
+##Web-Metaclub
+
+WEB-Metaclub is an open-source Meteor project developed for [MetaClub](https://metaclub.github.io/).
+
+This repository was build with this tutorial: https://www.angular-meteor.com/tutorials/socially/angular2/bootstrapping
+
+###Installation
+
+To get started with this project, please refer to these [installation instructions.](INSTALL.md)
+
