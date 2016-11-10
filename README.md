@@ -1,4 +1,5 @@
 ##Web-Metaclub
+[![Build Status](https://travis-ci.org/MetaClub/web-metaclub.svg?branch=master)](https://travis-ci.org/MetaClub/web-metaclub)
 
 WEB-Metaclub is an open-source Meteor project developed for [MetaClub](https://metaclub.github.io/).
 

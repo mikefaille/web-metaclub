@@ -1,0 +1,15 @@
+sudo: false
+
+language: node_js
+node_js:
+  - "6"
+  - "6.1"
+  - "5.11"
+
+before_install:
+  - "curl https://install.meteor.com | /bin/sh"
+  - export PATH="$HOME/.meteor:$PATH"
+  - "cd src/"
+  - "meteor npm install"
+
+script: "meteor test --once --driver-package dispatch:mocha-phantomjs"
