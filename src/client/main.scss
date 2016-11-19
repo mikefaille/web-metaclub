@@ -1,13 +1,13 @@
-@import "{}/node_modules/angular2-meteor-accounts-ui/build/login-buttons.scss";
-@import "imports/app/mobile/ionic.scss";
+@import "../node_modules/angular2-meteor-accounts-ui/build/login-buttons.scss";
+@import "imports/app/home/home.scss";
 
-$color1 : #2F2933;
-$color2 : #01A2A6;
-$color3 : #29D9C2;
-$color4 : #BDF271;
-$color5 : #FFFFA6;
-$color6 : #2F2933;
-$color7 : #FF6F69;
+$color1: #2F2933;
+$color2: #01A2A6;
+$color3: #29D9C2;
+$color4: #BDF271;
+$color5: #FFFFA6;
+$color6: #2F2933;
+$color7: #FF6F69;
 
 .fill-remaining-space {
   flex: 1 1 auto;
@@ -52,7 +52,3 @@ body.web {
     right: 17px;
   }
 }
-
-@import "./imports/app/parties/parties-list.component";
-@import "./imports/app/parties/party-details.component";
-@import "./imports/app/parties/parties-upload.component";
