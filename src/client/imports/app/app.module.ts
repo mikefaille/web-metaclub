@@ -7,6 +7,7 @@ import {Ng2PaginationModule} from 'ng2-pagination';
 import {AgmCoreModule} from 'angular2-google-maps/core';
 
 import {HomeComponent} from "./home/home.component.web";
+import {ContactComponent} from "./contact/contact.component.web";
 import {AppComponent} from "./app.component.web";
 import {routes, ROUTES_PROVIDERS} from './app.routes';
 import {SHARED_DECLARATIONS} from './shared';
@@ -59,6 +60,7 @@ else {
         declarations: [
             AppComponent,
             HomeComponent,
+            ContactComponent,
             ...SHARED_DECLARATIONS,
             ...AUTH_DECLARATIONS
         ],
