@@ -1,4 +1,8 @@
+@import "../common/mixins";
+
 .Contact {
   // Just testing...
   font-family: Monospace;
+  @include vertical-center;
 }
+
