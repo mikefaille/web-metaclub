@@ -7,6 +7,7 @@ import {Ng2PaginationModule} from 'ng2-pagination';
 import {AgmCoreModule} from 'angular2-google-maps/core';
 
 import {HomeComponent} from "./home/home.component.web";
+import {CalendarComponent} from "./calendar/calendar.component.web";
 import {AppComponent} from "./app.component.web";
 import {routes, ROUTES_PROVIDERS} from './app.routes';
 import {SHARED_DECLARATIONS} from './shared';
@@ -31,8 +32,7 @@ if (Meteor.isCordova) {
             ...SHARED_DECLARATIONS
         ],
         providers: [],
-        bootstrap: [
-        ],
+        bootstrap: [],
         entryComponents: []
     }
 }
@@ -59,6 +59,7 @@ else {
         declarations: [
             AppComponent,
             HomeComponent,
+            CalendarComponent,
             ...SHARED_DECLARATIONS,
             ...AUTH_DECLARATIONS
         ],

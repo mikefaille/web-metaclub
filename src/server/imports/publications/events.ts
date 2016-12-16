@@ -3,8 +3,8 @@
  */
 
 import {Meteor} from 'meteor/meteor';
-
-import {Events} from '../collections/events.collection';
+import SimpleSchema from 'simpl-schema';
+import {Events} from '../../../both/collections/events.collection';
 
 if (Meteor.isServer) {
 
@@ -63,6 +63,7 @@ if (Meteor.isServer) {
      * @returns {Object}    A cursor for the events
      */
     Meteor.publish('events.byDateRange', (startDate: Date, endDate: Date) => {
+        debugger;
         new SimpleSchema({
             startDate: {
                 type: Date,
