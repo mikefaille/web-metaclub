@@ -20,6 +20,7 @@ import {MdCheckboxModule} from "@angular2-material/checkbox";
 import {MdListModule} from "@angular2-material/list";
 import {AUTH_DECLARATIONS} from "./auth/index";
 import {FileDropModule} from "angular2-file-drop";
+import { TreeModule } from 'angular2-tree-component';
 
 let moduleDefinition;
 
@@ -54,7 +55,8 @@ else {
             MdCardModule.forRoot(),
             MdCheckboxModule.forRoot(),
             MdListModule.forRoot(),
-            FileDropModule
+            FileDropModule,
+            TreeModule
         ],
         declarations: [
             AppComponent,

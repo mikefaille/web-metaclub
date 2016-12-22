@@ -1,0 +1,10 @@
+.calendar {
+  display: flex;
+  padding: 1em;
+  &__filter {
+    width: 20%;
+  }
+  &__fullCalendar {
+    width: 80%;
+  }
+}

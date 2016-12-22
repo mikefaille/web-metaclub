@@ -8,12 +8,13 @@ import {CollectionObject} from './collection-object.model';
 export interface Event extends CollectionObject {
     name: string;
     title: string;
-    description: string;
-    startDatetime: Date;
-    endDatetime: Date;
-    allDay:boolean;
-    url:string;
-    creatorId: string;
-    clubId?: string;
+    description?: string;
+    start_datetime: Date;
+    end_datetime: Date;
+    all_day: boolean;
+    url: string;
+    creator_id: string;
+    categories_ids?: Array<string>;
+    club_id?: string;
 }
 

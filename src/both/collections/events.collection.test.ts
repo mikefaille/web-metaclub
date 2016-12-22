@@ -9,8 +9,8 @@ if (Meteor.isServer) {
             let eventTemplate = {
                 name: 'test',
                 description: 'Just a description',
-                startDatetime: new Date(""),
-                endDatetime: new Date(""),
+                start_datetime: new Date(""),
+                end_datetime: new Date(""),
                 creatorId: new Mongo.ObjectID(),
                 clubId: new Mongo.ObjectID()
             };

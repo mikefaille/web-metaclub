@@ -13,3 +13,13 @@ declare module 'meteor/tmeasday:publish-counts' {
 
     export const Counts: CountsObject;
 }
+
+
+interface JQuery {
+    fullCalendar(opts: any)
+}
+interface JQueryStatic {
+    fullCalendar(opts: any)
+}
+
+

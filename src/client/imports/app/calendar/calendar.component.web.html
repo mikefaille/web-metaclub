@@ -1,3 +1,15 @@
-<div id="placeholder">
-    <div id="calendar"></div>
+<div class="calendar">
+    <div class="calendar__filter">
+        <h4>Filters</h4>
+        <Tree #tree [nodes]="nodes" (onActivate)="onFilterNodeActivated($event)" (onDeactivate)="onFilterNodeDeactivated($event)"
+              [options]="treefilterOpts">
+            <template #treeNodeTemplate let-node>
+                <input type="checkbox" [(ngModel)]="node.data.checked" />
+                <span>{{ node.data.name }}</span>
+            </template>
+        </Tree>
+    </div>
+    <div class="calendar__fullCalendar">
+        <div id="calendar"></div>
+    </div>
 </div>

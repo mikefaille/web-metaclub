@@ -40,21 +40,22 @@ if (Meteor.isServer) {
             userId: {type: String, regEx: SimpleSchema.RegEx.Id}
         }).validate({userId});
 
-        return Events.find({userId: userId});
+        return Events.find({user_id: userId});
     });
 
     /**
      * Publish all the events for a club
      * @returns {Object}    A cursor for all the events of a specific club.
      */
-    Meteor.publish('events.byClub', (clubId) => {
-        //We validate our event id
-        new SimpleSchema({
-            clubId: {type: String, regEx: SimpleSchema.RegEx.Id}
-        }).validate({clubId});
-
-        return Events.find({clubId: clubId});
-    });
+    // Meteor.publish('events.byClub', (clubId) => {
+    //     //TODO : Update once the club are definitives
+    //     //We validate our event id
+    //     new SimpleSchema({
+    //         clubId: {type: String, regEx: SimpleSchema.RegEx.Id}
+    //     }).validate({clubId});
+    //
+    //     return Events.find({club_id: clubId});
+    // });
 
     /**
      * Let you get the events from a certain date range
@@ -63,7 +64,6 @@ if (Meteor.isServer) {
      * @returns {Object}    A cursor for the events
      */
     Meteor.publish('events.byDateRange', (startDate: Date, endDate: Date) => {
-        debugger;
         new SimpleSchema({
             startDate: {
                 type: Date,
@@ -81,23 +81,23 @@ if (Meteor.isServer) {
                 throw new Meteor.Error('Invalid parameters values', 'The ending date must be higher that the starting date');
 
             return Events.find({
-                startDatetime: {
+                start_datetime: {
                     '$gte': startDate
                 },
-                endDatetime: {
+                end_datetime: {
                     '$lte': endDate
                 }
             });
         }
         else if (startDate != null) {
             return Events.find({
-                startDatetime: {
+                start_datetime: {
                     '$gte': startDate
                 }
             });
         } else if (endDate != null) {
             return Events.find({
-                endDatetime: {
+                end_datetime: {
                     '$lte': endDate
                 }
             });
