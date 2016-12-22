@@ -1,3 +1,4 @@
+/* eslint-env mocha */
 import {Meteor} from 'meteor/meteor';
 import {Mongo} from 'meteor/mongo';
 import {Events} from './events.collection';
@@ -16,23 +17,20 @@ if (Meteor.isServer) {
             };
 
             it('should fail on empty event', (done) => {
-                Events.insert({}, (error,result)=> {
+                Events.insert({}, (error, result) => {
                     done(assert.notEqual(error, undefined));
                 });
             });
 
             it('should fail without a name attribute', (done) => {
-                let withoutNameObj = Object.assign({},eventTemplate);
+                let withoutNameObj = Object.assign({}, eventTemplate);
                 delete withoutNameObj.name;
-                Events.insert(withoutNameObj,(error,result)=>{
-                   done(assert.notEqual(error,undefined));
+                Events.insert(withoutNameObj, (error, result) => {
+                    done(assert.notEqual(error, undefined));
                 });
             });
 
         });
 
-        describe('Update validations', () => {
-
-        });
     });
 }
