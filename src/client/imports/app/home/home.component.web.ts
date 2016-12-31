@@ -3,7 +3,9 @@
  */
 import {Component} from '@angular/core';
 
+import {Observable} from 'rxjs/Observable';
 import template from './home.component.web.html';
+import {Events} from  '../../../../both/collections/events.collection';
 import {InjectUser} from "angular2-meteor-accounts-ui";
 
 @Component({
@@ -12,6 +14,7 @@ import {InjectUser} from "angular2-meteor-accounts-ui";
 })
 @InjectUser('user')
 export class HomeComponent {
+
     constructor() {
 
     }

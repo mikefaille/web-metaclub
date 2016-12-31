@@ -7,6 +7,7 @@ import {Ng2PaginationModule} from 'ng2-pagination';
 import {AgmCoreModule} from 'angular2-google-maps/core';
 
 import {HomeComponent} from "./home/home.component.web";
+import {CalendarComponent} from "./calendar/calendar.component.web";
 import {ContactComponent} from "./contact/contact.component.web";
 import {AppComponent} from "./app.component.web";
 import {routes, ROUTES_PROVIDERS} from './app.routes';
@@ -20,6 +21,7 @@ import {MdCheckboxModule} from "@angular2-material/checkbox";
 import {MdListModule} from "@angular2-material/list";
 import {AUTH_DECLARATIONS} from "./auth/index";
 import {FileDropModule} from "angular2-file-drop";
+import { TreeModule } from 'angular2-tree-component';
 
 let moduleDefinition;
 
@@ -32,8 +34,7 @@ if (Meteor.isCordova) {
             ...SHARED_DECLARATIONS
         ],
         providers: [],
-        bootstrap: [
-        ],
+        bootstrap: [],
         entryComponents: []
     }
 }
@@ -55,11 +56,13 @@ else {
             MdCardModule.forRoot(),
             MdCheckboxModule.forRoot(),
             MdListModule.forRoot(),
-            FileDropModule
+            FileDropModule,
+            TreeModule
         ],
         declarations: [
             AppComponent,
             HomeComponent,
+            CalendarComponent,
             ContactComponent,
             ...SHARED_DECLARATIONS,
             ...AUTH_DECLARATIONS

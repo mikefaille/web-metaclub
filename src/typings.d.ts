@@ -1,15 +1,25 @@
 declare module '*.html' {
-  const template: string;
-  export default template;
+    const template: string;
+    export default template;
 }
 
 declare module 'meteor/tmeasday:publish-counts' {
-  import { Mongo } from 'meteor/mongo';
-  
-  interface CountsObject {
-    get(publicationName: string): number;
-    publish(context: any, publicationName: string, cursor: Mongo.Cursor, options: any): number;
-  }
+    import {Mongo} from 'meteor/mongo';
 
-  export const Counts: CountsObject;
+    interface CountsObject {
+        get(publicationName: string): number;
+        publish(context: any, publicationName: string, cursor: Mongo.Cursor<Object>, options: any): number;
+    }
+
+    export const Counts: CountsObject;
 }
+
+
+interface JQuery {
+    fullCalendar(opts: any)
+}
+interface JQueryStatic {
+    fullCalendar(opts: any)
+}
+
+
