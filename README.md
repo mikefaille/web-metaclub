@@ -8,4 +8,3 @@ This repository was build with this tutorial: https://www.angular-meteor.com/tut
 ###Installation
 
 To get started with this project, please refer to these [installation instructions.](INSTALL.md)
-
