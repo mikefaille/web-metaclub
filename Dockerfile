@@ -3,6 +3,7 @@ MAINTAINER Michaël Faille <michael@faille.io>
 
 ENV METEOR_USERNAME meteor
 ENV METEOR_PASSWORD letmein
+ENV METEOR_RELEASE "1.4.2.3"
 
 RUN mkdir /opt/meteor
 

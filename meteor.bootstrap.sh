@@ -2,27 +2,23 @@
 
 # Maintainer : Michael Faille <michael@faille.io>
 
-
 # This is the Meteor install script!
 #
 # Are you looking at this in your web browser, and would like to install Meteor?
-
-
-
 
 # We wrap this whole script in a function, so that we won't execute
 # until the entire script is downloaded.
 # That's good because it prevents our output overlapping with curl's.
 # It also means that we can't run a partially downloaded script.
 # We don't indent because it would be really confusing with the heredocs.
+
+# METEOR_RELEASE must be configured from environnements variables.
+
 run_it () {
 
     # This always does a clean install of the latest version of Meteor into your
     # ~/.meteor, replacing whatever is already there. (~/.meteor is only a cache of
     # packages and package metadata; no personal persistent data is stored there.)
-
-    RELEASE="1.4.2.3"
-
 
     # Now, on to the actual installer!
 
@@ -31,6 +27,8 @@ run_it () {
     ## example.
 
     PREFIX="$HOME"
+
+
 
     set -e
     set -u
@@ -41,7 +39,7 @@ run_it () {
 
     UNAME=$(uname)
 
-    TARBALL_URL="https://meteorinstall-4168.kxcdn.com/packages-bootstrap/${RELEASE}/meteor-bootstrap-os.linux.x86_64.tar.gz"
+    TARBALL_URL="https://meteorinstall-4168.kxcdn.com/packages-bootstrap/${METEOR_RELEASE}/meteor-bootstrap-os.linux.x86_64.tar.gz"
     INSTALL_TMPDIR="$HOME/.meteor-install-tmp"
     TARBALL_FILE="$HOME/.meteor-tarball-tmp"
 
@@ -98,7 +96,7 @@ run_it () {
     cleanUp
 
     echo
-    echo "Meteor ${RELEASE} has been installed in your home directory (~/.meteor)."
+    echo "Meteor ${METEOR_RELEASE} has been installed in your home directory (~/.meteor)."
 
     METEOR_SYMLINK_TARGET="$(readlink "$HOME/.meteor/meteor")"
     METEOR_TOOL_DIRECTORY="$(dirname "$METEOR_SYMLINK_TARGET")"
