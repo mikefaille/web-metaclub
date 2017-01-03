@@ -28,14 +28,11 @@ run_it () {
 
     PREFIX="$HOME"
 
-
-
     set -e
     set -u
 
     # Let's display everything on stderr.
     exec 1>&2
-
 
     UNAME=$(uname)
 
@@ -106,15 +103,9 @@ run_it () {
     echo "Writing a launcher script to $PREFIX/bin/meteor for your convenience."
     cat <<"EOF"
 
-To get started fast:
+Congrats ! Our bootstrap scripts worked on your docker build.
 
-  $ meteor create ~/my_cool_app
-  $ cd ~/my_cool_app
-  $ meteor
-
-Or see the docs at:
-
-  docs.meteor.com
+README.md will help on docker usage.
 
 EOF
 
